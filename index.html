@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./unnamed.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <a href="https://gmail.com/">Gmail</a>
+            <a href="https://www.google.com.vn/imghp?hl=vi&authuser=0&ogbl">Hình ảnh</a>
+            <a href="">
+                <i class="fas fa-th"></i>
+            </a>
+            <a href="">
+                <img src="./unnamed.png" alt="">
+            </a>
+        </div>
+        <div class="content">
+            <div class="content__main">
+                <div class="content__main-img">
+                    <img src="./googlelogo_color_160x56dp.png" alt="">
+                </div>
+                <div class="content__main-form">
+                    <input type="text" class="search" id="" onkeydown="fhover()" placeholder="Tìm kiếm ...">
+                    <div class="content__form-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="content__main-search">
+                    <button id="btn" onclick="return searchInfo()" >Tìm trên Google</button>
+                    <button>Follow me</button>
+                </div>
+                <div class="content__main-luanguages">
+                    Google có các thứ tiếng: 
+                    <span>
+                        <a href="">English</a>
+                    </span>
+                    <span>
+                        <a href="">France</a>
+                    </span>
+                    <span>
+                        <a href="">China</a>
+                    </span>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="footer">
+            <div class="socialicons">
+                <a href="" class="icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="" class="icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="" class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+     
+        function searchInfo(){
+            const searchEl = document.querySelector(".search");
+            if(searchEl.value ==""){
+                return false;
+            }
+            else{
+                
+                window.location=`https://www.google.com/search?q=${searchEl.value}`;
+                return true;
+            }
+
+        }
+      const searchEl=document.querySelector(".search");
+       searchEl.addEventListener("keydown",function(event){
+           if(event.key=="Enter"){
+            if(searchEl.value ==""){
+                return false;
+            }
+            else{
+                
+                window.location=`https://www.google.com/search?q=${searchEl.value}`;
+                return true;
+            }
+
+           }
+       })
+    </script>
+</body>
+</html>
